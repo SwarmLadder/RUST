@@ -31,3 +31,9 @@ Each workshop has a worked example, a tracing question, five coding exercises, a
 ## Level assessment
 
 Complete the 52 functions and three projects, then run `cargo test --test basics --test basics_practice --test basics_projects`. Answer the knowledge checks in each workshop before opening its answer key. For each project, demonstrate its acceptance example and submit the final project-review exercise. Check your added cases against the reference with `cargo test --features reference --test basics --test basics_practice --test basics_projects`.
+
+## Engineering mastery extension — B01–B04
+
+After the **52 existing Basics functions and three Basics projects**, complete the [four additional Basics mastery challenges](../mastery/basics.md): typed port validation (B01), Unicode-safe borrowed windows (B02), overflow-safe integer means (B03), and deterministic word-frequency maps (B04).
+
+Implement them in [mastery/starter.rs](../mastery/starter.rs) and validate with `cargo test --test mastery b01_ports`. The separate `--features reference` option tests the maintained worked solution, not your own starter implementation. Record a [Basics portfolio milestone](../PORTFOLIO.md) before proceeding to Intermediate. Follow the full [12-week curriculum](../CURRICULUM.md).

@@ -31,3 +31,9 @@ Each workshop has a worked example, a tracing question, five coding exercises, a
 ## Level assessment
 
 Complete the 52 functions and three projects, then run `cargo test --test intermediate --test intermediate_practice --test intermediate_projects`. Answer the knowledge checks in each workshop before opening its answer key. For each project, demonstrate its acceptance example and submit the final project-review exercise. Check your added cases against the reference with `cargo test --features reference --test intermediate --test intermediate_practice --test intermediate_projects`.
+
+## Engineering mastery extension — I01–I04
+
+After the **52 existing Intermediate functions and three Intermediate projects**, complete the [four additional Intermediate mastery challenges](../mastery/intermediate.md): predictable physical-line parser errors (I01), borrowed first-character indexing (I02), safe inclusive interval merges (I03), and deterministic score ranking (I04).
+
+Implement them in [mastery/starter.rs](../mastery/starter.rs) and validate with `cargo test --test mastery i01_settings`. The `reference` Cargo feature checks the published answers, not your current solution. Submit a [typed configuration and scheduling portfolio milestone](../PORTFOLIO.md); continue with the [Advanced track](../mastery/advanced.md).

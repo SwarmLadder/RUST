@@ -31,3 +31,9 @@ Each workshop has a worked example, a tracing question, five coding exercises, a
 ## Level assessment
 
 Complete the 52 functions and three projects, then run `cargo test --test advanced --test advanced_practice --test advanced_projects`. Answer the knowledge checks in each workshop before opening its answer key. For each project, demonstrate its acceptance example and submit the final project-review exercise. Check your added cases against the reference with `cargo test --features reference --test advanced --test advanced_practice --test advanced_projects`.
+
+## Engineering mastery extension — A01–A04
+
+After the **52 existing Advanced functions and three Advanced projects**, complete the [four additional Advanced mastery challenges](../mastery/advanced.md): bounded binary frame decoding (A01), scoped-thread byte histograms (A02), all-or-nothing balance updates (A03), and race-safe atomic capacity reservations (A04).
+
+Implement them in [mastery/starter.rs](../mastery/starter.rs), starting with `cargo test --test mastery a01_frames`. The `reference` feature is for testing the course key, not grading unfinished exercises. Create an [offline reliability portfolio](../PORTFOLIO.md), then use the [final assessment](../ASSESSMENT.md) to check your evidence and safety decisions.

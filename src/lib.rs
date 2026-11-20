@@ -107,3 +107,7 @@ pub mod intermediate_practice;
 
 #[path = "../advanced/practice/mod.rs"]
 pub mod advanced_practice;
+
+/// Twelve additional graded, production-style Rust engineering challenges.
+#[path = "../mastery/mod.rs"]
+pub mod mastery;

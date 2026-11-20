@@ -7,6 +7,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: cargo check --all-targets
-      - run: cargo test --features reference
-      - run: test "$(cargo run --quiet --example study_log --features reference)" = '2 sessions, 65 minutes'
+      - name: Validate curriculum, mastery tasks and local links
+        run: python3 tools/validate_course.py
+      - name: Compile student-mode library, tests and examples
+        run: cargo check --all-targets
+      - name: Run original and new mastery tests against reference solutions
+        run: cargo test --features reference
+      - name: Build API documentation with included mastery curriculum
+        run: cargo doc --features reference --no-deps
+      - name: Verify study-log reference example
+        run: test "$(cargo run --quiet --example study_log --features reference)" = '2 sessions, 65 minutes'
+      - name: Verify full Rust mastery demonstration
+        run: |
+          output="$(cargo run --quiet --example mastery_demo --features reference)"
+          test "$output" = 'Rust mastery OK: port=8080; window=é🙂; words=2; frames=1; count_a=2; balance=7; seats=2'
