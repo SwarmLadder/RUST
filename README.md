@@ -1,6 +1,29 @@
-# Rust foundations and practical Rust
+# SwarmLadder Rust
 
-Build a study-log analyzer in eight exercises. Start with a single session and finish with a command that groups a whole week of sessions by topic. Both modules use stable Rust, Cargo and the standard library.
+Learn Rust locally with Cargo. The course has three levels. Each level includes four workshops, 12 coding exercises, 20 questions with explained answers, and three projects with acceptance tests and worked solutions.
+
+| Level | What you will practice | What you will build |
+| --- | --- | --- |
+| [Basics](basics/README.md) | Values, conditions, UTF-8 text, slices and vectors | Trail elevation report, pantry shopping list, scoreboard |
+| [Intermediate](intermediate/README.md) | Error handling, maps, generic functions and iterators | Invoice roll-up, concordance, room scheduler |
+| [Advanced](advanced/README.md) | Borrowed views, streaming I/O, scoped threads and rollback | Event counter, parallel histogram, transactional ledger |
+
+## Your first exercise
+
+Install stable Rust using [rustup](https://rustup.rs/). Then run:
+
+```sh
+git clone https://github.com/SwarmLadder/RUST
+cd RUST
+cargo check --all-targets
+cargo test --test basics temperature -- --exact
+```
+
+The starter test fails at an intentional `todo!()`. Read [Reading sensor values](basics/workshop-1.md), edit `temperature` in [basics/exercises.rs](basics/exercises.rs), and rerun the same command. Use the default Cargo features to test your own code. Use `cargo test --features reference` to check the complete answer key, including examples from the guides.
+
+## Guided study-log project
+
+These eight linked lessons build a command-line application across two modules. Try module 1 alongside Basics and module 2 alongside Intermediate.
 
 ## Module 1 — foundations
 
@@ -22,21 +45,4 @@ Start after completing the parser in lesson 3. Each lesson includes a worked exa
 | [Render predictable output](lessons/07-render.md) | `render` | `cargo test lesson7` |
 | [Project — command-line report](lessons/08-cli.md) | `report` | `cargo test lesson8` |
 
-## Start
-
-Install stable Rust and Cargo using [rustup](https://rustup.rs/), then run:
-
-```sh
-git clone https://github.com/SwarmLadder/RUST
-cd RUST
-cargo check --all-targets
-cargo test lesson1
-```
-
-Open [the exercise file](src/exercises.rs). Each starter compiles and stops at an intentional `todo!()` until you implement it. Run the lesson's tests after each edit. After module 1, run `cargo test --test course` and `cargo run --example study_log`. After module 2, run `cargo test` for the full suite.
-
-## Check a worked solution
-
-`cargo test --features reference` runs the same tests against the worked solutions. `cargo run --example study_log --features reference` prints the completed report. Use the default commands when checking your own work.
-
-The course runs locally with Cargo and has no external crate dependencies. SwarmLadder Lab browser execution for Rust is a separate milestone.
+After module 1, run `cargo test --test course`. After module 2, run `cargo test --test report`. Run the completed example with `cargo run --example study_log --features reference`.
