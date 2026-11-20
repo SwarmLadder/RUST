@@ -82,3 +82,10 @@ cargo doc --features reference --no-deps
 ```
 
 **Learner-mode warning:** Existing course starter functions and the 12 new mastery starters deliberately contain `todo!()` placeholders. Their tests fail until you implement the requirements. Use `--features reference` only to verify course reference code, not as evidence of completing your own implementation.
+
+## Reference and contribution materials
+
+- [Rust engineering cheatsheet](CHEATSHEET.md) — ownership, UTF-8, checked arithmetic, I/O, transactions and concurrency.
+- [Glossary](GLOSSARY.md) — concise definitions of borrowing, lifetimes, atomics and Cargo features.
+- [Contributor guide](CONTRIBUTING.md) — preserve starter/reference contracts, tests and safety expectations.
+- [Mastery acceptance tests](tests/mastery.rs) and [invariant tests](tests/mastery_properties.rs) — inspect expected behavior and robustness.
