@@ -173,7 +173,7 @@ fn a04_atomic_capacity_is_bounded_even_under_races() {
         let counter = Arc::clone(&shared);
         handles.push(std::thread::spawn(move || reserve_capacity(&counter, 20, 1).is_ok()));
     }
-    let successes = handles.into_iter().filter(|j| j.join().unwrap()).count();
+    let successes = handles.into_iter().map(|j| j.join().unwrap()).filter(|ok| *ok).count();
     assert_eq!(successes, 20);
     assert_eq!(shared.load(Ordering::SeqCst), 20);
 }
