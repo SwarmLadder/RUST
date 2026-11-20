@@ -47,7 +47,8 @@ def validate() -> list[str]:
             problems.append(f"tests/mastery.rs: expected four {prefix.upper()}xx tests")
 
     docs = [
-        ROOT / name for name in ("README.md", "CURRICULUM.md", "ASSESSMENT.md", "PORTFOLIO.md")
+        ROOT / name for name in ("README.md", "CURRICULUM.md", "ASSESSMENT.md", "PORTFOLIO.md",
+                             "CHEATSHEET.md", "GLOSSARY.md", "CONTRIBUTING.md")
     ]
     docs.extend(ROOT / name / "README.md" for name in LEVELS)
     docs.extend((ROOT / "mastery").glob("*.md"))
