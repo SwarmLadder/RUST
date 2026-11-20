@@ -22,3 +22,10 @@ pub struct Summary {
     pub sessions: usize,
     pub minutes: u64,
 }
+
+/// An owned record that can outlive the text it was parsed from.
+#[derive(Debug, PartialEq, Eq)]
+pub struct Session {
+    pub topic: String,
+    pub minutes: u32,
+}

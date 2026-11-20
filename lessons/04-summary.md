@@ -13,3 +13,5 @@ Implement `summarize` in `src/exercises.rs`. Initialize a Summary with zero sess
 Run `cargo test lesson4`, then `cargo test` for the whole course. Finally run `cargo run --example study_log`. Its two entries should print `2 sessions, 65 minutes`. Change the second duration to `forty` and verify the example identifies line 3.
 
 Extension: Add your own regression test for a valid zero-minute session followed by a malformed line.
+
+[Continue to module 2 — keep owned records](05-owned-records.md)

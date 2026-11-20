@@ -1,0 +1,4 @@
+Ownership,25
+ Traits ,15
+
+Ownership,10
