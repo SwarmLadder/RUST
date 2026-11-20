@@ -1,11 +1,11 @@
 # SwarmLadder Rust
 
-Learn Rust locally with Cargo. The course has three levels. Each level includes four workshops, 12 coding exercises, 20 questions with explained answers, and three projects with acceptance tests and worked solutions.
+Learn Rust locally with Cargo. The course has three levels. Each level includes 12 workshops, 52 coding exercises, 36 review questions with explained answers, and three projects with acceptance tests and worked solutions.
 
 | Level | What you will practice | What you will build |
 | --- | --- | --- |
 | [Basics](basics/README.md) | Values, conditions, UTF-8 text, slices and vectors | Trail elevation report, pantry shopping list, scoreboard |
-| [Intermediate](intermediate/README.md) | Error handling, maps, generic functions and iterators | Invoice roll-up, concordance, room scheduler |
+| [Intermediate](intermediate/README.md) | Ownership, domain errors, collections, traits, ordering, data formats and closures | Invoice roll-up, concordance, room scheduler |
 | [Advanced](advanced/README.md) | Borrowed views, streaming I/O, scoped threads and rollback | Event counter, parallel histogram, transactional ledger |
 
 ## Your first exercise

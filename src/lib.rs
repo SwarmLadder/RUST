@@ -98,3 +98,12 @@ pub mod advanced_projects;
 #[doc = include_str!("../advanced/projects/histogram.md")]
 #[doc = include_str!("../advanced/projects/settle.md")]
 pub mod advanced_projects;
+
+#[path = "../basics/practice/mod.rs"]
+pub mod basics_practice;
+
+#[path = "../intermediate/practice/mod.rs"]
+pub mod intermediate_practice;
+
+#[path = "../advanced/practice/mod.rs"]
+pub mod advanced_practice;
